@@ -90,11 +90,11 @@ function showGallery() {
 
 showGallery();
 
-function handleGalleryClick(e) {
-  e.preventDefault();
-  if (e.target === e.currentTarget) return;
+function handleGalleryClick(event) {
+  event.preventDefault();
+  if (event.target === event.currentTarget) return;
 
-  const originalGalleryItem = e.target.dataset.source;
+  const originalGalleryItem = event.target.dataset.source;
   const image = images.find((el) => el.original === originalGalleryItem);
 
   showGalleryModal(image);
